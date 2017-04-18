@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    mixin menuItem(url, content, title)
+      a.item(href=url, title=title) #{content}
+
+    .menu
+      +menuItem("/", "Index", "Back to Index")
+      +menuItem(""," "," ")
+      +menuItem("/upload", "Upload", "Upload New Files")
+    block content
